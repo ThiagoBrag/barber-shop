@@ -1,68 +1,60 @@
+@import 'tailwindcss';
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --bg: #f1f3f6;
+  --bg-secondary: #ffffff;
+  --text-default: #000000;
+  --text-orange: #f34213;
+  --hover-bg: #e2e6eb;
+  --opacity: 5%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.dark {
+  --bg: #050609;
+  --bg-secondary: #0e111a;
+  --text-default: #ffffff;
+  --text-orange: #f34213;
+  --hover-bg: #0e111a;
+  --opacity: 2%;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.color-bg {
+  transition: background 0.3s ease;
+  background: var(--bg);
+  color: var(--text-default);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.text-primary {
+  transition: color 0.3s ease;
+  color: var(--text-default);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.text-orange {
+  transition: color 0.3s ease;
+  color: var(--text-orange);
+}
+
+.color-bg-secondary {
+  transition: background 0.3s ease;
+  background: var(--bg-secondary);
+}
+
+.color-bg-orange {
+  transition: background 0.3s ease;
+  background: var(--text-orange);
+  color: var(--bg-secondary);
+}
+
+.color-hover-bg:hover {
+  transition: background 0.3s ease;
+  background: var(--hover-bg);
+}
+
+.opacity {
+  transition: opacity 0.3s ease;
+  opacity: var(--opacity);
+}
+
+.border-orange {
+  border-color: var(--text-orange);
 }
